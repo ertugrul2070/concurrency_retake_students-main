@@ -54,7 +54,7 @@ namespace Concurrency_retake
             {
                 while (pickupPoint.Count == 0)
                 {
-                    Monitor.Wait(Program.pickupLock);  // 🚨 block until food is added
+                    Monitor.Wait(Program.pickupLock);
                 }
                 tmpmyfood = pickupPoint.First();
                 pickupPoint.RemoveFirst();

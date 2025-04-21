@@ -45,7 +45,7 @@ namespace Concurrency_retake
             {
                 while (orderLocation.Count == 0)
                 {
-                    Monitor.Wait(Program.orderLock); // 🔁 Wait for a client to place an order
+                    Monitor.Wait(Program.orderLock);
                 }
             tempOrder = orderLocation.First();
 
